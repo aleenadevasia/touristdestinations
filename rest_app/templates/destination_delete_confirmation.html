@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Deletion</title>
+</head>
+<body>
+    <h1>Delete Destination</h1>
+    <p>Are you sure you want to delete this destination?</p>
+    <form action="{% url 'destination-delete' id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">
+    </form>
+    <a href="{% url 'index' %}">Cancel</a>
+</body>
+</html>

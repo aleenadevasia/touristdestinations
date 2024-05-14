@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details</title>
+</head>
+<body>
+    <h1>Destination Details</h1>
+    {% if destinations %}
+        <h2>{{ destinations.place_name }}</h2>
+        <p>Weather: {{ destinations.weather }}</p>
+        <p>District: {{ destinations.district }}</p>
+        <!-- Add more destination information here as needed -->
+        <h2>Description</h2>
+        <ul>
+            {% for desc in description %}
+                <li>{{ desc }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No destination found.</p>
+    {% endif %}
+</body>
+</html>
